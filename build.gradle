@@ -1,0 +1,21 @@
+plugins {
+	id 'org.springframework.boot' version '2.0.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.pecc.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'io.micrometer:micrometer-registry-stackdriver:1.5.1'
+	implementation ("io.micrometer:micrometer-core:1.5.1")
+	implementation ("org.springframework.boot:spring-boot-starter-actuator")
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
